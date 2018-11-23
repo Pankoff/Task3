@@ -16,6 +16,7 @@ public class Store {
 
     private double maxPeople = 0;
     private List<Integer> hour = new ArrayList<>();
+    private int counter=1;
 
     public List<Double> getCashOffice1() {return cashOffice1;}
 
@@ -28,7 +29,6 @@ public class Store {
     public List<Double> getCashOffice5() {return cashOffice5; }
 
     public void getQueueAtStore(List<Double> cashOffice, String path){
-            int counter=1;
             String tmp;
             try (BufferedReader reader = new BufferedReader(new InputStreamReader
                     (new FileInputStream(new File(path+counter)), "utf-8"))) {
